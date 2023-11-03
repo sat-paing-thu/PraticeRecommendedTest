@@ -9,7 +9,7 @@ export default function Card({card}) {
         <Text
           style={{
             textAlign: 'center',
-            fontSize: 16,
+            fontSize: 18,
             color: '#fff',
             fontWeight: 600,
           }}>
@@ -18,7 +18,7 @@ export default function Card({card}) {
       </View>
       <View style={styles.cardContainer}>
         {card.practice_set.map((item, index) => (
-          <CardItem item={item} index={index} />
+          <CardItem item={item} index={index} key={index} />
         ))}
       </View>
     </View>

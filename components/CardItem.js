@@ -1,11 +1,13 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {Pressable, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import DottedLine from './DottedLine';
 
 export default function CardItem({item, index}) {
   const isEven = num => num % 2;
+  const handlePress = index => console.log(`Pressed test id: ${index}`);
   return (
-    <View
+    <Pressable
+      onPress={() => handlePress(index)}
       style={[
         styles.cardCouple,
         {
@@ -37,7 +39,7 @@ export default function CardItem({item, index}) {
       <View style={styles.lockStatus}>
         <Text>LO</Text>
       </View>
-    </View>
+    </Pressable>
   );
 }
 

@@ -6,8 +6,8 @@ import Card from './components/Card';
 function App() {
   return (
     <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
-      {DataJson.data.map(card => (
-        <Card card={card} />
+      {DataJson.data.map((card, index) => (
+        <Card card={card} key={index} />
       ))}
       <StatusBar backgroundColor={'#DAAFCB'} barStyle={'dark-content'} />
     </ScrollView>
